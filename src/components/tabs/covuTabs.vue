@@ -6,7 +6,7 @@
       v-for="(title, index) in tabTitles"
       :key="index"
       :class="{active: index + 1 == currentTabWindow}"
-      
+      v-on:click="viewTabWindows(index + 1)"
       >
       {{ title }}
       </span>
@@ -20,7 +20,6 @@
       </div>
     </div>
   </div>
-  <!-- v-on:click="viewTabWindows(index + 1)" -->
 </template>
 <script>
 
@@ -42,7 +41,7 @@ export default {
       viewSliderElements: [], // 显示的窗口组 滑块组
       previousWindows: 1, // 上一次的窗口
     }
-  },/*
+  },
   watch: {
     currentTabWindow: function(val) { // currentTabWindow监听tab切换的窗口变化 立即执行函数viewTabWindows
       this.viewTabWindows(val);
@@ -109,7 +108,7 @@ export default {
       el.className = cls.trim();
       return true;
     }
-  },*/
+  },
 }
 </script>
 <style lang="less">
