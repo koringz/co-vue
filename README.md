@@ -4,6 +4,7 @@
 
 如何使用[pull request](https://github.com/koringz/covu/blob/master/pull%20request.md)
 
+## 合并
 
 ## 目录结构
 
