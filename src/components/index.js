@@ -1,4 +1,4 @@
-import coveHead from './head/coveHead'
-import covuTabs from './tabs/covuTabs'
+import coHead from './head/head'
+import coTabs from './tabs/tabs'
 
-export { coveHead, covuTabs }
+export { coHead, coTabs }

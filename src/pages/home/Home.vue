@@ -1,16 +1,10 @@
 <template>
   <div class="box">
-    <cove-head title="主页" icon="返回" user="注册" v-on:back="plus" v-on:info="than"> </cove-head>
+    <co-head title="主页" icon="返回" user="注册" v-on:back="plus" v-on:info="than"> </co-head>
 
     <div class="box_list">
       <div v-on:click="dynmc(1)" class="cursor clickme red">
-        点击我动态改变数据
-      </div>
-    </div>
-
-    <div class="box_list">
-      <div class="">
-        add= {{ add }} more= {{ more }} 
+        点击我动态改变数据   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add= {{ add }} more= {{ more }} 
       </div>
     </div>
 
@@ -32,10 +26,16 @@
       </div>
     </div>
 
+    <div class="box_list">
+      <div class="">
+        <router-link :to="{path:'/collapse' }"> covu-Collapse </router-link>
+      </div>
+    </div>
+
   </div>
 </template>
 <script>
-import {coveHead} from '../../components'
+import {coHead} from '../../components'
 
 export default {
   data () {
@@ -63,7 +63,7 @@ export default {
     },
   },
   components : {
-    coveHead
+    coHead
   }
 }
 </script>

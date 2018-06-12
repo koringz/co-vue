@@ -1,8 +1,8 @@
 <template>
-  <div class="default-tabs" default-tabs>
-    <div class="default-tabs-menu">
+  <div class="covu-tabs" covu-tabs>
+    <div class="covu-tabs-menu">
       <span
-      class="default-tab-submenu"
+      class="covu-tab-submenu"
       v-for="(title, index) in tabTitles"
       :key="index"
       :class="{active: index + 1 == currentTabWindow}"
@@ -11,9 +11,9 @@
       {{ title }}
       </span>
     </div>
-    <div class="default-tabs-content">
+    <div class="covu-tabs-content">
       <div
-      class="default-tab-page"
+      class="covu-tab-page"
       ref="tab-page"
       >
         <slot></slot>
@@ -24,6 +24,7 @@
 <script>
 
 export default {
+  name: 'coTabs',
   props: {
     tabTitles: {
       type: Array,
@@ -68,10 +69,10 @@ export default {
         [].forEach.call(this.viewSliderElements,(item,index)=> {
 
           if(index == self.currentTabWindow - 1){
-            self.removeClass(item,'zone')
+            self.removeClass(item,'covu-style-height-zone')
           }
           else {
-            self.addClass(item,'zone')
+            self.addClass(item,'covu-style-height-zone')
           }
 
         })
@@ -112,7 +113,7 @@ export default {
 }
 </script>
 <style lang="less">
-  .default-tabs{
+  .covu-tabs{
     display: block;
     margin: 0 auto;
     padding: 10px;
@@ -120,11 +121,11 @@ export default {
     height: auto;
     overflow: hidden;
   }
-  .default-tabs-menu{
+  .covu-tabs-menu{
     display: table;
     width: 100%;
   }
-  .default-tab-submenu{
+  .covu-tab-submenu{
     display: table-cell;
     padding: 5px 15px;
     font-size: 14px;
@@ -134,26 +135,26 @@ export default {
     color: #111;
     cursor: pointer;
   }
-  .default-tab-submenu:last-child{
+  .covu-tab-submenu:last-child{
     border-right: none
   }
-  .default-tabs-content{
+  .covu-tabs-content{
     padding: 10px;
     min-height: 300px;
     background-color: #f9f9f9;
     box-shadow: 0px 1px 3px #f4f4f4;
   }
-  .default-tab-page{
+  .covu-tab-page{
     font-size: 14px;
     color: #333;
   }
-  .default-tab-page > div{
+  .covu-tab-page > div{
     overflow: hidden;
   }
-  .zone{
+  .covu-style-height-zone{
     height: 0px;
   }
-  .default-tab-submenu.active{
+  .covu-tab-submenu.active{
     background-color: #BAF9C2;
     color: #505050;
     font-size: 13px;

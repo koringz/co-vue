@@ -1,10 +1,10 @@
 <template>
   <div class="box">
-    <cove-head title="主页1111" icon="返回111" user="注册11111" > </cove-head>
+    <co-head title="主页" icon="返回" user="注册" > </co-head>
   </div>
 </template>
 <script>
-import {coveHead} from '../../components'
+import {coHead} from '../../components'
 
 export default {
   data () {
@@ -18,7 +18,7 @@ export default {
   methods : {
   },
   components : {
-    coveHead
+    coHead
   }
 }
 </script>

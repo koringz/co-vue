@@ -1,14 +1,14 @@
 <template>
   <div class="box">
-    <covu-tabs :tabTitles="setTabTitle" :tabWindows="3">
+    <co-tabs :tabTitles="setTabTitle" :tabWindows="3">
       <div class=""> 123 </div>
       <div class=""> 345 </div>
       <div class=""> 678 </div>
-     </covu-tabs>
+     </co-tabs>
   </div>
 </template>
 <script>
-import {covuTabs} from '../../components'
+import {coTabs} from '../../components'
 
 export default {
   data () {
@@ -17,7 +17,7 @@ export default {
     }
   },
   components : {
-    covuTabs
+    coTabs
   }
 }
 </script>

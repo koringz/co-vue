@@ -2,8 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/home/Home'
 import Test from '@/pages/test/Test'
-import coveTabs from '@/pages/tabs/Tabs'
-import coveHead from '@/pages/head/head'
+import Head from '@/pages/head/Head'
+import Tabs from '@/pages/tabs/Tabs'
 
 Vue.use( Router )
 
@@ -13,6 +13,11 @@ export default new Router({
       path: '/',
       name: 'Hello',
       component: Hello
+    },
+    {
+      path: '/test/:id',
+      name: 'test',
+      component: Test
     },*/
     {
       path: '/',
@@ -20,19 +25,14 @@ export default new Router({
       component: Home
     },
     {
-      path: '/test/:id',
-      name: 'test',
-      component: Test
-    },
-    {
       path: '/head',
       name: 'head',
-      component: coveHead
+      component: Head
     },
     {
       path: '/tabs',
       name: 'tabs',
-      component: coveTabs
+      component: Tabs
     }
   ]
 })
