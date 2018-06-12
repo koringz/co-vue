@@ -4,6 +4,7 @@ import Home from '@/pages/home/Home'
 import Test from '@/pages/test/Test'
 import Head from '@/pages/head/Head'
 import Tabs from '@/pages/tabs/Tabs'
+import Collapse from '@/pages/collapse/Collapse'
 
 Vue.use( Router )
 
@@ -33,6 +34,11 @@ export default new Router({
       path: '/tabs',
       name: 'tabs',
       component: Tabs
+    },
+    {
+      path: '/collapse',
+      name: 'collapse',
+      component: Collapse
     }
   ]
 })
