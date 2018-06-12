@@ -1,7 +1,8 @@
+#covu
 
+## 推入
 
-
-
+如何使用【pull request](https://github.com/koringz/covu/blob/master/pull%20request.md)
 
 
 ## 目录结构
