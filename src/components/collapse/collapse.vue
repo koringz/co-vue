@@ -1,6 +1,6 @@
 <template>	
-	<div>
-		<div>{{}}</div>
+	<div role="tabList" class="co-collapse">
+		<slot></slot>
 	</div>
 </template>
 <script>
@@ -10,14 +10,54 @@
 			title: {
 				type: String,
 				default: ''
+			},
+			value: {
+				type: [Array, Number, String],
+				default() {
+					return []
+				}
 			}
 		},
 		data() {
 			return {
-
+				activeNames: [].concat(this.value)
+			}
+		},
+		provide() {
+			return {
+				collapse: this
+			}
+		},
+		watch: {
+			value(val) {
+				this.activeNames = [].concat(val)
 			}
 		},
 		methods: {
+			setActiveNames(activeNames) {
+				activeNames = [].concat(activeNames);
+				this.activeNames = activeNames;
+
+        		this.$emit('change', value);
+			},
+			handleItemEvents(item) {
+				let activeNames = this.activeNames.slice(0);
+				let index = activeNames.indexOf(item.name);
+
+				if(index > -1) activeNames.splice(index,1);
+				else activeNames.push(item.name);
+
+				this.setActiveNames(activeNames)
+			}
+		},
+		created() {
+			this.$on('item-click',this.handleItemEvents);
 		}
 	} 
 </script>
+<style>
+	.co-collapse{
+		border-top: 1px solid #ebeef5;
+    	border-bottom: 1px solid #ebeef5;
+	}
+</style>
