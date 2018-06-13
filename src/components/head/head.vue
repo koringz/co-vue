@@ -1,7 +1,7 @@
 <template>
   <div class="co-header">
     <div class="default-top-header default-header-shadow">
-      <div class="default-web-icon" v-on:click="$emit('back')">
+      <div class="default-web-icon" v-on:click="$router.go(-1)">
         <span>{{ icon }}</span>
       </div>
       <div class="default-web-center">
