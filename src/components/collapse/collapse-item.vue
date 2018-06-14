@@ -3,7 +3,7 @@
 		<div 
 		class="co-collapse-item__header" 
 		role="button"
-		v-on:click="handleHeaderClick"
+		@click="handleHeaderClick"
 		:class="{
 			'is-active': isActive
 		}"
@@ -24,6 +24,7 @@
 <script>
 	export default {
 		name: 'coCollapseItem',
+
 		data() {
 			return {
 				isClick: false,
@@ -33,18 +34,20 @@
 			title: String,
 			name: {
 				type: [String,Number],
-				default: []
+				default() {
+					this._uid
+				}
 			}
 		},
 		inject: ['collapse'],
 		computed: {
 			isActive(val) {
-				return this.collapse.activeNames.indexOf(this.name) > -1
+				return this.collapse.activeNames.indexOf(this.name) > -1;
 			}
 		},
 		methods: {
 			handleHeaderClick() {
-				this.$emit('item-click',this);
+				this.$parent.$emit('item-click',this);
 				this.isClick = true;
 			}
 		}
