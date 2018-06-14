@@ -6,6 +6,7 @@
 <script>
 	export default {
 		name: 'coCollapse',
+
 		props: {
 			title: {
 				type: String,
@@ -38,7 +39,7 @@
 				activeNames = [].concat(activeNames);
 				this.activeNames = activeNames;
 
-        		this.$emit('change', value);
+        		this.$emit('change', activeNames);
 			},
 			handleItemEvents(item) {
 				let activeNames = this.activeNames.slice(0);
