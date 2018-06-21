@@ -8,10 +8,7 @@
 		name: 'coCollapse',
 
 		props: {
-			title: {
-				type: String,
-				default: ''
-			},
+			accordion: Boolean,
 			value: {
 				type: [Array, Number, String],
 				default() {
@@ -42,13 +39,19 @@
         		this.$emit('change', activeNames);
 			},
 			handleItemEvents(item) {
-				let activeNames = this.activeNames.slice(0);
-				let index = activeNames.indexOf(item.name);
+				// nothing add collapse effect of condition.
+				if(this.accordion) {
+					this.setActiveNames(this.activeNames[0] === item.name ? '' : item.name);
+				}
+				else {
+					let activeNames = this.activeNames.slice(0);
+					let index = activeNames.indexOf(item.name);
 
-				if(index > -1) activeNames.splice(index,1);
-				else activeNames.push(item.name);
+					if(index > -1) activeNames.splice(index,1);
+					else activeNames.push(item.name);
 
-				this.setActiveNames(activeNames)
+					this.setActiveNames(activeNames)
+				}
 			}
 		},
 		created() {
@@ -59,6 +62,5 @@
 <style>
 	.co-collapse{
 		border-top: 1px solid #ebeef5;
-    	border-bottom: 1px solid #ebeef5;
 	}
 </style>
