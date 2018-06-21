@@ -32,6 +32,12 @@
       </div>
     </div>
 
+    <div class="box_list">
+      <div class="">
+        <router-link :to="{path:'/button' }"> covu-Button </router-link>
+      </div>
+    </div>
+
   </div>
 </template>
 <script>

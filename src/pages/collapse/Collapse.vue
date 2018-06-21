@@ -65,13 +65,16 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 	.default-h1{
 		padding-bottom: 36px;
 		text-align: left;
 		font-size: 20px;
 		font-weight: 400;
 		color: #666;
+	}
+	.padding-30:hover .border-line-left{
+		border-left-color: gray;
 	}
 	.horizontal-center{
 		width: 600px;
