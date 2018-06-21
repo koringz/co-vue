@@ -8,7 +8,12 @@
 			'is-active': isActive
 		}"
 		>
-			<i class="co-collapse-item__arrow co-icon-arrow__right"></i>
+			<i 
+			class="co-collapse-item__arrow co-icon-arrow__right" 
+			:class="{
+				'is-active': isActive
+			}"
+			>›</i>
 			<span name="title"><slot name="title">{{title}}</slot></span>
 		</div>
 		<div 
@@ -47,7 +52,7 @@
 		},
 		methods: {
 			handleHeaderClick() {
-				this.$parent.$emit('item-click',this);
+				this.collapse.$emit('item-click',this);
 				this.isClick = true;
 			}
 		}
@@ -74,10 +79,18 @@
 		border-bottom-color: transparent; 
 	}
 		.co-collapse-item__arrow{
-
+			font-size: 18px;
+			font-weight: 300;
+			font-style: normal;
+			color: #666;
+		}
+		.co-collapse-item__arrow.is-active{
+			transform: rotate(90deg);
+			color: #888;
 		}
 		.co-icon-arrow__right{
-
+			float: right;
+			margin-right: 12px;
 		}
 
 	.co-collapse-item__wrap{
