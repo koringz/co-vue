@@ -116,33 +116,34 @@ export default {
   .covu-tabs{
     display: block;
     margin: 0 auto;
-    padding: 10px;
-    width: 380px;
+    padding: 0px;
+    min-width: 300px;
     height: auto;
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,.12);
+    border: 1px solid #F5F6FA;
     overflow: hidden;
   }
   .covu-tabs-menu{
-    display: table;
     width: 100%;
+    background-color: #F2F2F2;
   }
   .covu-tab-submenu{
-    display: table-cell;
-    padding: 5px 15px;
+    display: inline-block;
+    white-space: nowrap;
+    padding: 12.26px 20px;
     font-size: 14px;
     text-align: center;
-    border-right: 1px solid #D0CAEC;
-    background-color: #E4DDFD;
-    color: #111;
+    border-right: 1px solid #E2E3EA;
+    color: #999;
     cursor: pointer;
   }
   .covu-tab-submenu:last-child{
     border-right: none
   }
   .covu-tabs-content{
-    padding: 10px;
-    min-height: 300px;
-    background-color: #f9f9f9;
-    box-shadow: 0px 1px 3px #f4f4f4;
+    padding: 20px;
+    height: auto;
+    background-color: #FFF;
   }
   .covu-tab-page{
     font-size: 14px;
@@ -155,9 +156,9 @@ export default {
     height: 0px;
   }
   .covu-tab-submenu.active{
-    background-color: #BAF9C2;
-    color: #505050;
-    font-size: 13px;
+    background-color: #FAFAFA;
+    color: #409eff;
+    font-size: 14px;
   }
   .invisible{
     visibility: hidden

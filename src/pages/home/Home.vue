@@ -1,40 +1,47 @@
 <template>
   <div class="box">
-    <co-head title="主页" icon="返回" user="注册" v-on:back="plus" v-on:info="than"> </co-head>
+    <co-head title="主页" icon="" user="" v-on:back="plus" v-on:info="than"> </co-head>
 
-    <div class="box_list">
+    <!-- <div class="box_list">
       <div v-on:click="dynmc(1)" class="cursor clickme red">
         点击我动态改变数据   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add= {{ add }} more= {{ more }} 
+        &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>-->
+
+    <div class="box_list" style="margin-top: 60px;padding-top:20px;">
+      <div class="">
+        <router-link :to="{path:'/head' }"> covu-Head 头部栏</router-link>
       </div>
     </div>
 
     <div class="box_list">
       <div class="">
-        <router-link :to="{path:'/test/id='+ 3 }"> test  </router-link>
+        <router-link :to="{path:'/tabs' }"> covu-Tab 切换</router-link>
       </div>
     </div>
 
     <div class="box_list">
       <div class="">
-        <router-link :to="{path:'/head' }"> covu-head </router-link>
+        <router-link :to="{path:'/collapse' }"> covu-Collapse 手风琴</router-link>
       </div>
     </div>
 
     <div class="box_list">
       <div class="">
-        <router-link :to="{path:'/tabs' }"> covu-tab </router-link>
+        <router-link :to="{path:'/button' }"> covu-Button 按钮</router-link>
       </div>
     </div>
 
     <div class="box_list">
       <div class="">
-        <router-link :to="{path:'/collapse' }"> covu-Collapse </router-link>
+        <router-link :to="{path:'/dialog' }"> covu-Dialog 弹出框</router-link>
       </div>
     </div>
 
     <div class="box_list">
       <div class="">
-        <router-link :to="{path:'/button' }"> covu-Button </router-link>
+        <router-link :to="{path:'/table' }"> covu-Table 表格</router-link>
       </div>
     </div>
 
@@ -73,7 +80,7 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
 @red:#f22;
 @gray: #efefef;
 @percent: 100%;
@@ -84,10 +91,10 @@ export default {
   text-align: left;
   .box_list{
     padding: 2px 8px;
-    margin: 16px 10px;
+    margin: 0 10px 16px;
     border-bottom: 1px solid @gray;
     a{
-      font-size: 14px;
+      font-size: 16px;
     }
   }
   .red{
@@ -97,4 +104,5 @@ export default {
     cursor: pointer;
   }
 }
+
 </style>

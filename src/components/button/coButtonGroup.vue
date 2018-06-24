@@ -23,8 +23,14 @@
 	position: relative;
 	box-sizing: border-box;
 }
-.co-button-group:before{
+.co-button-group:before,.co-button-group:after{
 	display: table;
 	content: ''
+}
+.co-button-group:before{
+	clear: both;
+}
+.co-button-group:after{
+	clear: both;
 }
 </style>

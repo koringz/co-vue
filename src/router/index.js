@@ -6,6 +6,8 @@ import Head from '@/pages/head/Head'
 import Tabs from '@/pages/tabs/Tabs'
 import Collapse from '@/pages/collapse/Collapse'
 import Button from '@/pages/button/Button'
+import Dialog from '@/pages/dialog/Dialog'
+import Table from '@/pages/table/Table'
 
 Vue.use( Router )
 
@@ -45,6 +47,16 @@ export default new Router({
       path: '/button',
       name: 'button',
       component: Button
+    },
+    {
+      path: '/dialog',
+      name: 'dialog',
+      component: Dialog
+    },
+    {
+      path: '/table',
+      name: 'table',
+      component: Table
     }
   ]
 })
