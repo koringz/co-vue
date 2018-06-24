@@ -11,12 +11,14 @@ export default {
 </script>
 
 <style>
+@import 'assets/styles/all.css';
+@import 'assets/styles/font-awesome-animation.min.css';
+
 #app {
   font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin-top: 60px;
   box-sizing: border-box;
   font-size: 14px;
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <co-head title="测试" icon="后退" user="记录" > </co-head>
+    <co-head title="测试" icon="" user="记录" back></co-head>
   </div>
 </template>
 <script>

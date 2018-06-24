@@ -1,15 +1,15 @@
 <template>
   <div class="co-header">
-    <div class="default-top-header default-header-shadow">
-      <div class="default-web-icon" v-on:click="$router.go(-1)">
-        <span>{{ icon }}</span>
+    <div class="co-header-top co-header-shadow">
+      <div class="co-header-icon" v-on:click="$router.go(-1)">
+        <span><i :class="[ back ? 'fas fa-angle-left' : '']"></i>{{ icon }}</span>
       </div>
-      <div class="default-web-center">
+      <div class="co-header-center">
         <span>
           {{ title }}
         </span>
       </div>
-      <div class="default-web-information" v-on:click="$emit('info')">
+      <div class="co-header-information" v-on:click="$emit('info')">
         <span>{{ user }}</span>
       </div>
     </div>
@@ -35,6 +35,10 @@ export default {
     user: {
       type: String,
       default: ''
+    },
+    back: {
+      type: Boolean,
+      default: false
     }
   },
   methods : {
@@ -49,59 +53,67 @@ export default {
 .co-header{
   position: absolute;
   width: @percent;
-  margin-top: -60px;
+  height: 60px;
+  line-height: 60px;
 }
-.default-top-header:before,
-.default-top-header:after{
+.co-header-top:before,
+.co-header-top:after{
   content: "";
   display: table;
 }
-.default-top-header{
+.co-header-top{
   position: relative;
   width: 100%;
-  height: auto;
+  height: inherit;
   margin: 0;
   border: none;
-  line-height: 1;
+  line-height: inherit;
   text-align: left;
-  background-color: #cfcfcf;
-  color: #848484;
+  background-color: #409eff;
+  color: #FFF;
 }
-.default-web-icon,
-.default-web-information{
+.co-header-icon,
+.co-header-information{
   display: inline-block;
   padding: 0;
-  font-size: 14px;
   font-weight: normal;
   color: #333;
 }
-.default-web-icon{
+.co-header-icon{
   cursor:pointer;
   padding-left: 10px;
 }
-.default-web-center{
+.co-header-icon span{
+  display: inline;
+}
+.co-header-icon span i{
+  font-size: 20px;
+}
+.co-header-center{
   display: inline-flex;
   position: absolute;
   left: 0;
   right: 0;
 }
-.default-web-center span{
+.co-header-center span{
   margin: 0 auto;
 }
-.default-web-information{
+.co-header-information{
   cursor:pointer;
   padding-right: 10px;
   float: right;
 }
-.default-header-shadow{
+.co-header-shadow{
   box-shadow: 0px 1px 4px gray
 }
-.default-web-icon,
-.default-web-information,
-.default-web-center{
-  padding: 10px;
+.co-header-icon,
+.co-header-information,
+.co-header-center{
+  line-height: 60px;
+  color: #FFF;
+  font-size: 18px;
 }
-.default-web-center{
+.co-header-center{
   margin: 0 150px;
 }
 </style>
