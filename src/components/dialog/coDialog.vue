@@ -1,8 +1,11 @@
 <template>
 	<transition>
-		<div class="co-dialog">
-			<div class="co-dialog-box"
-				v-bind:style=" styles() "
+		<div class="co-dialog" v-show="visible">
+			<div 
+				class="co-dialog-box"
+				v-bind:style="styles()"
+				:class="{'co-dialog-center': center }"
+				ref="dialog"
 				>
 				<div class="co-dialog-header">
 					<slot name="header">
@@ -11,7 +14,8 @@
 				            type="button"
 				            class="co-dialog-header__btn"
 				            aria-label="Close"
-				            @click="handleClose">
+				            @click="handleClose"
+				        >
 				            <i class="fas fa-times-circle"></i>
 				        </button>
 					</slot>
@@ -32,6 +36,7 @@ export default {
 	
 	data() {
 		return {
+
 		}
 	},
 
@@ -43,7 +48,19 @@ export default {
 		width: {
 			type: String,
 			default: ''
+		},
+		center: {
+			type: Boolean,
+			default: false
+		},
+		visible: {
+			type: Boolean,
+			default: false
 		}
+	},
+
+	mounted() {
+		this.visible
 	},
 
 	methods: {
@@ -56,7 +73,7 @@ export default {
 		},
 
 		handleClose() {
-			
+			this.$emit('update:visible', false);
 		}
 	}
 }
@@ -95,6 +112,9 @@ export default {
     box-shadow: 0 1px 3px rgba(0,0,0,.3);
     box-sizing: border-box;
     width: 50%;
+}
+.co-dialog-center{
+	text-align: center;
 }
 .co-dialog-header{
 	padding: 20px;
