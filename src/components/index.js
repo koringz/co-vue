@@ -9,4 +9,13 @@ import coDialog from './dialog/coDialog';
 
 
 
-export { coHead, coTabs, coCollapse, coCollapseItem, coButton, coButtonGroup, coDialog, coTable }
+export { 
+	coHead, 
+	coTabs, 
+	coCollapse, 
+	coCollapseItem, 
+	coButton, 
+	coButtonGroup, 
+	coDialog, 
+	coTable 
+}

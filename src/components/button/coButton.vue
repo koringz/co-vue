@@ -7,6 +7,7 @@
     round ? 'co-button-round' : '',
     size ? 'co-button-' + size : '',
   ]"
+  v-on:click="$emit('event')"
   >
     <i :class="[
       loading == 'true' ? 'fa fa-spinner faa-spin animated' : ''
@@ -49,6 +50,9 @@
       return {
 
       }
+    },
+
+    mounted() {
     },
 
     methods: {
