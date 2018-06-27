@@ -33,70 +33,38 @@
   |--.babelrc
   |--README.md
 
-```
-
 ## 功能
 
- - 手风琴效果 （完）
-
- - 切换菜单 （完）
-
- - 头部菜单 （完）
- 
- - 按钮 （完）
-
- - 输入框 （待）
- 
- - 弹出框 （待）
- 
- - 提示信息 （待）
- 
- - 下拉菜单 （待）
- 
- - 通知信息 （待）
-
- - 加载项 （待）
-
- - 进度条 （待） 
-
- - 表格 （待）
-
- - 表单 （待）
-
- - 面包屑 （待）
-
- - 标记 （待）
-
- - 上传 （待）
- 
- - 日期时间选择 （待）
- 
- - 开关（待）
- 
- - 选择器select（待）
- 
- - 计数器 （待）
-
+ - 手风琴效果（完）
+ - 切换菜单（完）
+ - 头部菜单（完）
+ - 按钮（完）
+ - 输入框（待）-
+ - 弹出框（完）
+ - 提示信息（待）-
+ - 下拉菜单（待）-
+ - 通知信息（待）
+ - 加载项（待）-
+ - 进度条（待）-
+ - 表格（待）-
+ - 表单（待）-
+ - 面包屑（待）-
+ - 标记（待）-
+ - 上传（待）
+ - 日期时间选择（待）
+ - 开关（完）-
+ - 选择器select（待）-
+ - 计数器（待）-
  - 轮播（待）
- 
- - 多选框 （待）
- 
- - 分页 （待）
- 
- - icon的制作 （待）
-
- - cell （待）http://elemefe.github.io/mint-ui/#/cell
- 
+ - 多选框（待）-
+ - 分页（待）-
+ - icon的制作（待）-
+ - cell（待）http://elemefe.github.io/mint-ui/#/cell
  - app（待） https://vuematerial.io/components/app
- 
  - 头像（待）https://vuematerial.io/components/avatar
- 
  - 底部菜单
- 
  - draw划出（待）https://vuematerial.io/components/drawer
- 
- - Radio （待）https://vuematerial.io/components/radio
-
+ - Radio （待）https://vuematerial.io/components/radio -
 
  ## 参考
 
