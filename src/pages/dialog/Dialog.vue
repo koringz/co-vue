@@ -10,7 +10,7 @@
         >
           <span>正常情况下</span>
           <div slot="footer">
-            <co-button>删除</co-button>
+            <co-button @event="closeClick">删除</co-button>
             <co-button type="primary">确定</co-button>
           </div>
         </co-dialog>
@@ -19,7 +19,7 @@
   </div>
 </template>
 <script>
-import {coDialog,coButton} from '../../components'
+import {coDialog,coButton} from '../../components';
 
 export default {
   data () {
@@ -32,6 +32,9 @@ export default {
     handleClick () {
       this.visibleDialog = true;
       this.center = true
+    },
+    closeClick () {
+      this.visibleDialog = false;
     }
   },
   components : {
