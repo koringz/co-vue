@@ -2,12 +2,14 @@
   <div class="box">
     <co-head title="主页" icon="" user="" v-on:back="plus" v-on:info="than"> </co-head>
 
-    <!-- <div class="box_list">
+    <!-- 
+    <div class="box_list">
       <div v-on:click="dynmc(1)" class="cursor clickme red">
         点击我动态改变数据   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add= {{ add }} more= {{ more }} 
         &nbsp;&nbsp;&nbsp;&nbsp;
       </div>
-    </div>-->
+    </div>
+    -->
 
     <div class="box_list" style="margin-top: 60px;padding-top:20px;">
       <div class="">
@@ -42,6 +44,12 @@
     <div class="box_list">
       <div class="">
         <router-link :to="{path:'/table' }"> covu-Table 表格</router-link>
+      </div>
+    </div>
+
+    <div class="box_list">
+      <div class="">
+        <router-link :to="{path:'/switch' }"> covu-switch 开关</router-link>
       </div>
     </div>
 

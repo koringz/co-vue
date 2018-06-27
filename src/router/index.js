@@ -8,6 +8,8 @@ import Collapse from '@/pages/collapse/Collapse'
 import Button from '@/pages/button/Button'
 import Dialog from '@/pages/dialog/Dialog'
 import Table from '@/pages/table/Table'
+import Switch from '@/pages/switch/Switch'
+
 
 Vue.use( Router )
 
@@ -57,6 +59,11 @@ export default new Router({
       path: '/table',
       name: 'table',
       component: Table
+    },
+    {
+      path: '/switch',
+      name: 'switch',
+      component: Switch
     }
   ]
 })
