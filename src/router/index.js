@@ -9,6 +9,8 @@ import Button from '@/pages/button/Button'
 import Dialog from '@/pages/dialog/Dialog'
 import Table from '@/pages/table/Table'
 import Switch from '@/pages/switch/Switch'
+import Input from '@/pages/input/Input'
+import InputNumber from '@/pages/inputNumber/InputNumber'
 
 
 Vue.use( Router )
@@ -64,6 +66,16 @@ export default new Router({
       path: '/switch',
       name: 'switch',
       component: Switch
+    },
+    {
+      path: '/input',
+      name: 'input',
+      component: Input
+    },
+    {
+      path: '/inputNumber',
+      name: 'inputNumber',
+      component: InputNumber
     }
   ]
 })

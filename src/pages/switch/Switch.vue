@@ -1,7 +1,7 @@
 <template>
   <div class="horizontal-center">
     <div class="padding-30">
-    	<co-switch v-model="value1" activeText="选中" add-active-text="未选择"></co-switch><br><br>
+    	<co-switch v-model="value1" activeText="选中" disabled add-active-text="未选择"></co-switch><br><br>
     	<co-switch v-model="value2" activeText="失效" add-active-text="生效"></co-switch>
   	</div>
   </div>

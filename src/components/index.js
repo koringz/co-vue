@@ -7,6 +7,8 @@ import coButton from './button/coButton';
 import coTable from './table/coTable';
 import coDialog from './dialog/coDialog';
 import coSwitch from './switch/coSwitch';
+import coInput from './input/coInput';
+import coInputNumber from './inputNumber/coInputNumber';
 
 export { 
 	coHead, 
@@ -18,4 +20,6 @@ export {
 	coDialog, 
 	coTable, 
 	coSwitch, 
+	coInput,
+	coInputNumber,
 }
