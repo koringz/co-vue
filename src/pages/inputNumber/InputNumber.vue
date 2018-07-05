@@ -1,7 +1,7 @@
 <template>
   <div class="horizontal-center">
     <div class="padding-30">
-		<co-input-number v-model="num1" :min="2" :max="6" @change="handleChange" ></co-input-number>
+		<co-input-number v-model="num1" :min=".05" :max="6.05" step="0.5" @change="handleChange" ></co-input-number>
 	</div>
   </div>
 </template>
@@ -12,8 +12,7 @@ export default {
 
 	data() {
 		return {
-			num1: 1,
-			plus: 2
+			num1: 1.05,
 		}
 	},
 
