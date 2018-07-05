@@ -1,0 +1,68 @@
+/*home*/
+.box{
+  width: 100%;
+  overflow: hidden;
+  text-align: left;
+}
+.box_list{
+  position: relative;
+  margin: 0 10px;
+  border-bottom: 1px solid #efefef;
+  text-align: center;
+}
+.red{
+  color: #f22
+}
+.cursor{
+  cursor: pointer;
+}
+
+/*other*/
+.horizontal-center{
+  width: 600px;
+  margin: 0 auto;
+}
+.padding-30{
+  padding: 30px 0;
+}
+.default-h1{
+  padding-bottom: 38px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 400;
+  color: #666;
+}
+.title{
+  margin-top: -20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 20px;
+  line-height: 30px;
+  color: #aaa;
+}
+.descri{
+  padding-bottom: 36px;
+}
+.border-line-left{
+  border-left: 2px solid #FEE71D;
+}
+.padding-30:hover .border-line-left{
+  border-left-color: gray;
+}
+.padding-left-20{
+  padding-left: 20px;
+}
+.padding-30{
+  padding: 30px 0;
+}
+.co-button-group .co-button{
+  margin-left: 12px
+}
+
+/*common*/
+a{
+  display: block;
+  padding: 25px 0;
+  font-size: 16px;
+  color: #333;
+}
