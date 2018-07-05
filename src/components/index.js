@@ -1,3 +1,5 @@
+import Vue from "vue"
+
 import coHead from './head/coHead';
 import coTabs from './tabs/coTabs';
 import coCollapse from './collapse/collapse';
@@ -9,6 +11,8 @@ import coDialog from './dialog/coDialog';
 import coSwitch from './switch/coSwitch';
 import coInput from './input/coInput';
 import coInputNumber from './inputNumber/coInputNumber';
+
+Vue.component('co-input',coInput);
 
 export { 
 	coHead, 
