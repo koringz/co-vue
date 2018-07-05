@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import App from './App'
+
+import "@/aside/demo.css";
 import router from './router'
 
 

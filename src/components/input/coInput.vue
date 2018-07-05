@@ -223,31 +223,5 @@ export default {
     text-align: center;
     transition: all .3s;
 }
-
-
-/*下次*/
-.default-h1{
-	padding-bottom: 36px;
-	text-align: left;
-	font-size: 20px;
-	font-weight: 400;
-	color: #666;
-}
-.padding-30:hover .border-line-left{
-	border-left-color: gray;
-}
-.horizontal-center{
-	width: 600px;
-	margin: 0 auto;
-}
-.border-line-left{
-	border-left: 2px solid #FEE71D;
-}
-.padding-left-20{
-	padding-left: 20px;
-}
-.padding-30{
-	padding: 30px 0;
-}
 </style>
 

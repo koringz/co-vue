@@ -1,8 +1,11 @@
 <template>
-  <div class="box">
-    <co-table>
-    12334
-    </co-table>
+  <div class="horizontal-center">
+    <div class="padding-30">
+      <h2 class="default-h1">
+        <span class="padding-left-20 border-line-left">表格</span>
+      </h2>
+      <co-table activeText="失效" add-active-text="生效">123</co-table>
+    </div>
   </div>
 </template>
 <script>

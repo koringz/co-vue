@@ -1,15 +1,20 @@
 <template>
   <div class="horizontal-center">
     <div class="padding-30">
+        <h2 class="default-h1">
+          <span class="padding-left-20 border-line-left">搜入框</span>
+        </h2>
         <co-input 
-        	v-model="input"
-        	placeholder="请搜索内容"
-        	suffix-icon="fa fa-search">
+        	v-model="input1"
+        	placeholder="请搜索内容">
         </co-input>
       </div>
       <div class="padding-30">
+        <h2 class="default-h1">
+          <span class="padding-left-20 border-line-left">带搜索的输入框</span>
+        </h2>
         <co-input 
-        	v-model="input"
+        	v-model="input2"
         	placeholder="请搜索内容"
         	prefix-icon="fa fa-search">
 	        	<div slot="prepend">
@@ -18,9 +23,12 @@
         </co-input>
       </div>
       <div class="padding-30">
+        <h2 class="default-h1">
+          <span class="padding-left-20 border-line-left">带链接的输入框</span>
+        </h2>
         <co-input 
         	prepend
-        	v-model="input"
+        	v-model="input3"
         	placeholder="请输入内容"
         	>
 	        	<div slot="prepend">
@@ -31,7 +39,7 @@
       <div class="padding-30">
         <co-input 
         	append
-        	v-model="input"
+        	v-model="input3"
         	placeholder="请输入内容"
         	suffix-icon="fa fa-search">
 	        	<div slot="append">
@@ -49,7 +57,9 @@ export default {
 
 	data() {
 		return {
-			input: ''
+      input1: '',
+      input2: '',
+      input3: '',
 		}
 	},
 
@@ -58,7 +68,3 @@ export default {
 	}
 }
 </script>
-<style lang="less">
-
-</style>
-

@@ -1,10 +1,15 @@
 <template>
-  <div class="box">
-    <co-tabs :tabTitles="setTabTitle" :tabWindows="3">
-      <div class=""> 编号管理 </div>
-      <div class=""> 分类管理 </div>
-      <div class=""> 内容管理 </div>
-     </co-tabs>
+  <div class="horizontal-center">
+    <div class="padding-30">
+      <h2 class="default-h1">
+        <span class="padding-left-20 border-line-left">切换</span>
+      </h2>
+      <co-tabs :tabTitles="setTabTitle" :tabWindows="3">
+        <div class=""> 编号管理 </div>
+        <div class=""> 分类管理 </div>
+        <div class=""> 内容管理 </div>
+      </co-tabs>
+    </div>
   </div>
 </template>
 <script>
@@ -21,11 +26,3 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
-.box{
-  width: 800px;
-  margin: 30px auto;
-  padding: 20px 30px;
-  border: 1px solid #EEE;
-}
-</style>

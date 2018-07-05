@@ -33,6 +33,7 @@
 		  :max="max"
 		  :name="name"
 		  :label="label"
+		  :disabled="inputNumberDisabled"
 	      @keydown.up.native.prevent="increase"
 	      @keydown.down.native.prevent="decrease"
 	      @blur="handleBlur"
@@ -59,7 +60,6 @@ export default {
 			default: 1
 		},
 		inputNumberSize: Number,
-		inputNumberDisabled: Boolean,
 		type: {
 			type: String,
 			default: 'text'
@@ -75,6 +75,7 @@ export default {
 			default: -Infinity
 		},
 		name: String,
+		disabled:Boolean, 
 		gesture: Boolean,
 		precision: {
 			type: Number,
@@ -113,6 +114,9 @@ export default {
 				return curValue;
 			}
 		},
+		inputNumberDisabled() {
+			return this.disabled || {}.disabled
+		}
 	},
 
 	methods: {
@@ -179,6 +183,12 @@ export default {
     width: 180px;
     line-height: 38px;
 }
+.co-input-number span:hover{
+	color: #409EFF;
+}
+.co-input-number:hover input{
+	border-color: #409EFF;
+}
 .co-input-number-decrease, .co-input-number-increase {
     position: absolute;
     z-index: 1;
@@ -208,6 +218,11 @@ export default {
 	padding-left: 50px;
 	padding-right: 50px;
 	text-align: center;
+}
+.co-input-number.is-disabled .co-input-number-decrease, .co-input-number.is-disabled .co-input-number-increase,
+.co-input-number.is-disabled .co-input-inner {
+    border-color: #e4e7ed;
+    color: #e4e7ed;
 }
 </style>
 
