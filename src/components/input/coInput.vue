@@ -22,9 +22,11 @@
 				class="co-input-inner"
 				:type="type"
 				:disabled="inputDisabled"
+				:size="inputSize"
 				:value="currentValue"
 				@input="handleInput"
 				@focus="handleFocus"
+				@blur="handleBlur"
 				@change="handleChange"
 				v-bind="$attrs"
 				ref="input"
@@ -59,7 +61,8 @@ export default {
 
 	data() {
 		return {
-			currentValue: this.value == 'undefined' ? '' : this.value
+			currentValue: this.value == 'undefined' ? '' : this.value,
+			focused: false,
 		}
 	},
 
@@ -82,6 +85,12 @@ export default {
 		append: Boolean,
 	},
 
+	watch: {
+		value (val){
+			this.setCurrentValue(val)
+		}
+	},
+
 	computed: {
 		inputDisabled() {
 			return this.disabled || {}.disabled;
@@ -89,13 +98,36 @@ export default {
 	},
 
 	methods: {
-		handleInput() {
+		focus() {
+			this.$refs.input.focus();
+		},
+		blur() {
+			this.$refs.input.blur();
+		},
+		handleInput(event) {
+			const value = event.target.value;
+	        this.setCurrentValue(value);
+	        if (this.isOnComposition) return;
+	        this.$emit('input', value);
+		},
+
+		setCurrentValue(value) {
+			this.currentValue = value;
 		},
 		
-		handleFocus() {
+		handleFocus(event) {
+			this.focused = true;
+			this.$emit('focus',event);
+		},
+
+		handleBlur(event) {
+			this.focused = false;
+			this.$emit('blur',event);
 		},
 		
-		handleChange() {
+		handleChange(event) {
+			this.$emit('change',event.target.value);
+			
 		},
 	}
 }
@@ -191,19 +223,7 @@ export default {
     text-align: center;
     transition: all .3s;
 }
-[class*=" co-icon-"], [class^=co-icon-]{
-    font-family: element-icons!important;
-    speak: none;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: baseline;
-    display: inline-block;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+
 
 /*下次*/
 .default-h1{

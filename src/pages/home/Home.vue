@@ -92,7 +92,7 @@ export default {
   }
 }
 </script>
-<style lang="less">
+<style lang="less" scope>
 @red:#f22;
 @gray: #efefef;
 @percent: 100%;
@@ -117,6 +117,14 @@ export default {
   .cursor{
     cursor: pointer;
   }
+}
+
+.horizontal-center{
+  width: 600px;
+  margin: 0 auto;
+}
+.padding-30{
+  padding: 30px 0;
 }
 
 </style>
