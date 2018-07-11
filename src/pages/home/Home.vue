@@ -28,6 +28,9 @@
     <div class="box_list">
         <router-link :to="{path:'/table' }">  Table 表格</router-link>
     </div>
+    <div class="box_list">
+        <router-link :to="{path:'/steps' }">  step 步骤条</router-link>
+    </div>
   </div>
 </template>
 <script>

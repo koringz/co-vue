@@ -11,6 +11,8 @@ import coDialog from './dialog/coDialog';
 import coSwitch from './switch/coSwitch';
 import coInput from './input/coInput';
 import coInputNumber from './inputNumber/coInputNumber';
+import coSteps from './steps/coSteps';
+import coStep from './steps/coStep';
 
 Vue.component('co-input',coInput);
 
@@ -26,4 +28,6 @@ export {
 	coSwitch, 
 	coInput,
 	coInputNumber,
+	coSteps,
+	coStep
 }
