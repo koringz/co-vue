@@ -1,7 +1,9 @@
 <template>
 	<div class="horizontal-center">
     	<div class="padding-30">
-			{{active}}
+			<h2 class="default-h1">
+	          <span class="padding-left-20 border-line-left">进度步骤</span>
+	        </h2>{{active}}
 			<co-steps :active="active" final-status="success">
 				<co-step title="步骤1"></co-step>
 				<co-step title="步骤2" icon="fab fa-mixcloud" :size="30"></co-step>

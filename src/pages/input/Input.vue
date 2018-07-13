@@ -5,6 +5,7 @@
           <span class="padding-left-20 border-line-left">搜入框</span>
         </h2>
         <co-input 
+          :width="60"
         	v-model="input1"
         	placeholder="请搜索内容">
         </co-input>
@@ -14,6 +15,7 @@
           <span class="padding-left-20 border-line-left">带搜索的输入框</span>
         </h2>
         <co-input 
+          :width="60"
         	v-model="input2"
         	placeholder="请搜索内容"
         	prefix-icon="fa fa-search">
@@ -28,6 +30,7 @@
         </h2>
         <co-input 
         	prepend
+          :width="60"
         	v-model="input3"
         	placeholder="请输入内容"
         	>
@@ -41,6 +44,7 @@
         	append
         	v-model="input3"
         	placeholder="请输入内容"
+          :width="60"
         	suffix-icon="fa fa-search">
 	        	<div slot="append">
 	        		http://

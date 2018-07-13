@@ -13,6 +13,9 @@ import coInput from './input/coInput';
 import coInputNumber from './inputNumber/coInputNumber';
 import coSteps from './steps/coSteps';
 import coStep from './steps/coStep';
+import coSelect from './select/coSelect';
+import coOption from './select/coOption';
+
 
 Vue.component('co-input',coInput);
 
@@ -29,5 +32,7 @@ export {
 	coInput,
 	coInputNumber,
 	coSteps,
-	coStep
+	coStep,
+	coSelect,
+	coOption,
 }

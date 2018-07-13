@@ -11,6 +11,7 @@
 				'co-input--suffix': suffixIcon,
 			}
 		]"
+		:style="{'width': width + '%'}"
 	>
 		<template>
 			<!-- 前置元素 -->
@@ -23,6 +24,8 @@
 				:type="type"
 				:disabled="inputDisabled"
 				:size="inputSize"
+				:minLength="min"
+				:maxLength="max"
 				:value="currentValue"
 				@input="handleInput"
 				@focus="handleFocus"
@@ -76,6 +79,14 @@ export default {
 			type: Boolean,
 			default: false
 		}, 
+		min:{
+			type: Number,
+			default: 6
+		},
+		max:{
+			type: Number,
+			default: 50
+		},
 		inputSize: [String, Number],
 		value: [String, Number],
 		prefixIcon: String,
@@ -83,6 +94,10 @@ export default {
 		label: String,
 		prepend: Boolean,
 		append: Boolean,
+		width: {
+			type: Number,
+			default: 100
+		},
 	},
 
 	watch: {
@@ -127,7 +142,6 @@ export default {
 		
 		handleChange(event) {
 			this.$emit('change',event.target.value);
-			
 		},
 	}
 }
@@ -162,6 +176,7 @@ export default {
     padding: 0 15px;
     transition: border-color .2s cubic-bezier(.645,.045,.355,1);
     width: 100%;
+    cursor: pointer;
 }
 .co-input-append, 
 .co-input-prepend {
