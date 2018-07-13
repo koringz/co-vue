@@ -31,6 +31,9 @@
     <div class="box_list">
         <router-link :to="{path:'/steps' }">  step 步骤条</router-link>
     </div>
+    <div class="box_list">
+        <router-link :to="{path:'/select' }">  select 下拉菜单</router-link>
+    </div>
   </div>
 </template>
 <script>

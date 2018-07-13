@@ -12,6 +12,7 @@ import Switch from '@/pages/switch/Switch'
 import Input from '@/pages/input/Input'
 import InputNumber from '@/pages/inputNumber/InputNumber'
 import Steps from '@/pages/steps/Steps'
+import Select from '@/pages/select/Select'
 
 
 Vue.use( Router )
@@ -82,6 +83,11 @@ export default new Router({
       path: '/steps',
       name: 'steps',
       component: Steps
+    },
+    {
+      path: '/select',
+      name: 'select',
+      component: Select
     }
   ]
 })
